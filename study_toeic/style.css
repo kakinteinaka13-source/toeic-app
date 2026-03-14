@@ -1,0 +1,93 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-area {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.word {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    border-color: #1a73e8;
+    background-color: #f8fbff;
+}
+
+.menu-btn {
+    background-color: #e3f2fd;
+    font-weight: bold;
+    border: none;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.progress {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* 正解・不正解の時のクラス */
+.correct {
+    background-color: #c8e6c9 !important; /* 薄い緑 */
+    border-color: #4caf50 !important;
+    color: #2e7d32;
+}
+
+.wrong {
+    background-color: #ffcdd2 !important; /* 薄い赤 */
+    border-color: #f44336 !important;
+    color: #c62828;
+}
+
+/* 画面がふわっと出るアニメーション */
+#quiz-area {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ボタンが少し震えるアニメーション（不正解時用） */
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
